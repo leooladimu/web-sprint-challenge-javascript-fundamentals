@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// nestedFunction and internal are both within myFunction's scope
 
 
 
@@ -27,11 +27,13 @@ myFunction();
     2. Use a counter to return the summation of that number. 
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
-
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(num) {
+  let x = 0;
+  for (let i = 0; i <= num; i++) {
+    x += i;
   }
+  return x;
+}
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -55,10 +57,13 @@ const zooAnimals = [
   Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
-
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(zooAnimals) {
+    let displayNames = [];
+    zooAnimals.forEach(element => displayNames.push(`name: ${element.animal_name}, scientific: ${element.scientific_name}`));
+    return displayNames;
   }
+
+  // animalNames(zooAnimals);
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
